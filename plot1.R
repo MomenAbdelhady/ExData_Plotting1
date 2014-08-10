@@ -9,6 +9,8 @@ plot1 <- function(){
   names(data)<- datanames
   readydata<-data[data$Date=="1/2/2007"|data$Date=="2/2/2007",]
   
+  ##plot data
+  png("plot1.png", width=480, height=480)
   hist(readydata$Global_active_power,col="red",xlab="Global Active Power (Kilowatts)",main="Global Active Power")
-
+  dev.off()
 }
